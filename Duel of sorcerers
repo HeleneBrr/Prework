@@ -1,0 +1,40 @@
+gandalf_points = 0
+saruman_points = 0
+gandalf = [10, 11, 13, 30, 22, 11, 10, 33, 22, 22]
+saruman = [23, 66, 12, 43, 12, 10, 44, 23, 12, 17]
+for i in range (10):
+    if gandalf[i]<saruman[i]: saruman_points += 1
+    elif gandalf[i]>saruman[i] : gandalf_points += 1
+if gandalf_points > saruman_points : print("Gandalf wins")
+elif saruman_points > gandalf_points : print("Saruman wins")
+else:print("Tie")
+
+
+
+POWER = {
+    'Fireball': 50,
+    'Lightning bolt': 40,
+    'Magic arrow': 10,
+    'Black Tentacles': 25,
+    'Contagion': 45
+}
+gandalf = ['Fireball', 'Lightning bolt', 'Lightning bolt', 'Magic arrow', 'Fireball',
+           'Magic arrow', 'Lightning bolt', 'Fireball', 'Magic arrow', 'Fireball']
+saruman = ['Contagion', 'Contagion', 'Black Tentacles', 'Fireball', 'Black Tentacles',
+           'Lightning bolt', 'Magic arrow', 'Contagion', 'Magic arrow', 'Magic arrow']
+gandalf_points = 0
+saruman_points = 0
+for i in range (10):
+    if gandalf[i]<saruman[i]:
+        saruman_points += 1
+        gandalf_points = 0
+    elif gandalf[i]>saruman[i] :
+        gandalf_points += 1
+        saruman_points = 0
+    else:
+        gandalf_points=0
+        saruman_points=0
+    if saruman_points == 3 or gandalf_points == 3 : break
+if saruman_points ==3 : print("Saruman wins")
+elif gandalf_points ==3 : print("Gandalf wins")
+else : print("ties")
